@@ -60,39 +60,11 @@ A production-ready REST API with complete authentication system and role-based a
 ## 🏗️ Project Structure
 
 
-task-manager-api/
-├── src/
-│ ├── config/
-│ │ ├── database.js # PostgreSQL connection
-│ │ └── auth.js # JWT configuration
-│ ├── controllers/
-│ │ ├── authController.js # Login/Register logic
-│ │ ├── taskController.js # Task CRUD operations
-│ │ └── userController.js # User management (admin)
-│ ├── models/
-│ │ ├── userModel.js # User database queries
-│ │ └── taskModel.js # Task database queries
-│ ├── routes/
-│ │ ├── authRoutes.js # Authentication endpoints
-│ │ ├── taskRoutes.js # Task endpoints
-│ │ └── userRoutes.js # User management endpoints
-│ ├── middleware/
-│ │ ├── auth.js # JWT verification
-│ │ └── roles.js # Role-based access control
-│ └── utils/
-│ └── validation.js # Input validation
-├── frontend/
-│ ├── index.html # Login/Register page
-│ ├── dashboard.html # Tasks dashboard
-│ ├── styles.css # Styling
-│ └── app.js # Frontend logic
-├── .env.example # Environment variables template
-├── server.js # Main application
-├── swagger.js # API documentation config
-└── package.json # Dependencies
 
 
 
+
+<img width="286" height="759" alt="Screenshot 2026-02-27 at 9 46 51 PM" src="https://github.com/user-attachments/assets/3d2e6900-6a7c-4d83-b37f-7110a9f130b0" />
 
 
 ## 🚀 Getting Started
