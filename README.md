@@ -33,12 +33,13 @@ A production-ready REST API with complete authentication system and role-based a
 
 ## 📸 Screenshots
 
-<!-- Add your screenshots/GIFs here -->
-<img width="1470" height="956" alt="Screenshot 2026-02-28 at 1 34 33 AM" src="https://github.com/user-attachments/assets/268489e3-af27-4ca5-8d89-673d13386657" />
 
-<details><img width="1470" height="956" alt="Screenshot 2026-02-28 at 1 34 38 AM" src="https://github.com/user-attachments/assets/738e8b01-3322-4603-a1c0-02cde3fc78f3" />
+<img width="1470" height="956" alt="Screenshot 2026-02-28 at 1 34 33 AM" src="https://github.com/user-attachments/assets/1f00e64a-5eb3-4ffa-94b1-a9e97cc7319f" />
 
-<summary><b>Click to view screenshots</b></summary>
+<img width="1470" height="956" alt="Screenshot 2026-02-28 at 1 34 38 AM" src="https://github.com/user-attachments/assets/1d027869-e1fc-4e7e-b92f-6d05986ec668" />
+
+
+
 
 ### API Documentation (Swagger UI)
 ![Swagger UI](https://via.placeholder.com/800x400?text=Add+Swagger+UI+Screenshot+Here)
