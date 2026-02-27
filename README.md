@@ -31,12 +31,23 @@ A production-ready REST API with complete authentication system and role-based a
 - ✅ Admin-only user management
 - ✅ Hierarchical permissions
 
+
 ## 📸 Screenshots
 
 
-<img width="1470" height="956" alt="Screenshot 2026-02-28 at 1 34 33 AM" src="https://github.com/user-attachments/assets/1f00e64a-5eb3-4ffa-94b1-a9e97cc7319f" />
 
-<img width="1470" height="956" alt="Screenshot 2026-02-28 at 1 34 38 AM" src="https://github.com/user-attachments/assets/1d027869-e1fc-4e7e-b92f-6d05986ec668" />
+<img width="1470" height="920" alt="Screenshot 2026-02-28 at 2 12 19 AM" src="https://github.com/user-attachments/assets/2deb6f03-939a-423c-9b0c-84e5891ba054" />
+
+
+<img width="1470" height="923" alt="Screenshot 2026-02-28 at 2 10 00 AM" src="https://github.com/user-attachments/assets/2993eb86-8e96-4fad-a5f8-7bd1fa016f0b" />
+
+
+
+
+
+
+
+
 
 
 
