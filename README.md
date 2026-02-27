@@ -34,7 +34,10 @@ A production-ready REST API with complete authentication system and role-based a
 ## 📸 Screenshots
 
 <!-- Add your screenshots/GIFs here -->
-<details>
+<img width="1470" height="956" alt="Screenshot 2026-02-28 at 1 34 33 AM" src="https://github.com/user-attachments/assets/268489e3-af27-4ca5-8d89-673d13386657" />
+
+<details><img width="1470" height="956" alt="Screenshot 2026-02-28 at 1 34 38 AM" src="https://github.com/user-attachments/assets/738e8b01-3322-4603-a1c0-02cde3fc78f3" />
+
 <summary><b>Click to view screenshots</b></summary>
 
 ### API Documentation (Swagger UI)
@@ -153,27 +156,31 @@ Frontend: http://localhost:3000
 
 
 📚 API Documentation
-Base URL
+
 
 Authentication Endpoints
-Method	Endpoint	Description	Request Body	Response
-POST	/auth/register	Register new user	{ "name": "John", "email": "john@test.com", "password": "123456" }	201: User created with token
-POST	/auth/login	Login user	{ "email": "john@test.com", "password": "123456" }	200: User data with token
-GET	/auth/me	Get current user	-	200: User profile
-Task Endpoints (All require JWT token)
-Method	Endpoint	Description	Request Body	Response
-GET	/tasks	Get all tasks (user sees own, admin sees all)	-	200: Array of tasks
-GET	/tasks/:id	Get single task	-	200: Task object
-POST	/tasks	Create task	{ "title": "Task", "description": "Description" }	201: Created task
-PUT	/tasks/:id	Update task	{ "title": "Updated", "completed": true }	200: Updated task
-DELETE	/tasks/:id	Delete task	-	200: Success message
-User Endpoints (Admin only, require JWT token)
-Method	Endpoint	Description	Request Body	Response
-GET	/users	Get all users	-	200: Array of users
-GET	/users/:id	Get single user	-	200: User object
-PUT	/users/:id/role	Update user role	{ "role": "admin" }	200: Updated user
+Method	     Endpoint	                  Description	                                Body	                
+POST	    /auth/register	       Register new user	        { "name": "John", "email": "john@test.com", "password": "123456" }
+POST	     /auth/login	             Login user	                                 { "email": "john@test.com", "password": "123456" }	
+GET	         /auth/me	                    Get current user
+
+ ** Task Endpoints (All require JWT token)
+
+Method	Endpoint	   Description	                        Request Body	
+GET	     /tasks	     Get all tasks                          (user sees own, admin sees all)
+GET	   /tasks/:id	  Get single task
+POST	/tasks	         Create task	                  { "title": "Task", "description": "Description" }	
+PUT	    /tasks/:id	     Update task	                   { "title": "Updated", "completed": true }	
+DELETE	  /tasks/:id	 Delete task	
+
+** User Endpoints (Admin only, require JWT token)
+Method	Endpoint	Description	      Request Body	
+GET	     /users	    Get all users	
+GET	   /users/:id	 Get single user	-	
+PUT	 /users/:id/role	Update user role	{ "role": "admin" }	
+
 🔐 Environment Variables
-env
+.env
 # Server Configuration
 PORT=3000
 NODE_ENV=development
@@ -242,6 +249,62 @@ Click "Authorize" button
 Enter: Bearer your_jwt_token_here
 
 Test any endpoint directly in browser
+
+ 📊  Steps to Test Admin Role
+
+1.open POSTMAN
+   Register a new user :
+  url : POST http://localhost:3000/api/auth/register
+{
+  "name": "New Admin",
+  "email": "newadmin@example.com",
+  "password": "password123"
+}
+save token
+
+2.You're still a regular user initially - you can't make yourself admin via API (that would be a security flaw!)
+3.Use database to promote yourself:
+  UPDATE users SET role = 'admin' WHERE email = 'newadmin@example.com';
+
+🧪 Testing Admin Features
+
+1. After Getting Admin Token, Test in Postman:
+Get all users (Admin only):
+  GET  url : http://localhost:3000/api/users
+  Authorization: Bearer YOUR_ADMIN_TOKEN
+
+2.Get all tasks (Admin sees everyone's tasks):
+  GET http://localhost:3000/api/tasks
+Authorization: Bearer YOUR_ADMIN_TOKEN
+
+3.Change user role:
+ PUT http://localhost:3000/api/users/2/role
+Authorization: Bearer YOUR_ADMIN_TOKEN
+{
+  "role": "admin"
+}
+
+2. Test in Swagger UI:
+Open http://localhost:3000/api-docs
+
+Click Authorize button
+
+Enter: Bearer YOUR_ADMIN_TOKEN
+
+Try these admin-only endpoints:
+
+GET /api/users
+
+PUT /api/users/{id}/role
+
+3. Test in Frontend:
+Login with admin credentials
+
+You should see "User Management (Admin Only)" section
+
+See list of all users
+
+Buttons to make users admin should appear
 
 🎨 Frontend Features
 Login/Register Page: Beautiful form with tab switching
@@ -350,11 +413,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 👨‍💻 Author
 Your Name :T.vishal
 
-GitHub: @y
+GitHub: https://github.com/vishal0078380
 
-LinkedIn: Your LinkedIn
+LinkedIn: https://www.linkedin.com/in/vishal-tirupalli-/
 
-Portfolio: Your Website
 
 🙏 Acknowledgments
 Express.js community
